@@ -1,0 +1,26 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.formBoilerplate {
+  .commandBarItems {
+    height: 32px;
+    margin: 5px 10px 5px 4px;
+
+    .btnSave {
+      margin-top: 5px;
+    }
+  }
+  
+  .commandBarSeparators {
+    margin-top: -15px;
+  }
+
+  .breadcrumbItem {
+    padding: 23px;
+  }
+
+  .helloForm {
+    background-color: "[theme:white, default:#ffffff]";
+    color: "[theme:themePrimary, default:#0078d4]";
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "form-boilerplate-form-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/formBoilerplate/FormBoilerplateFormCustomizer.js",
+          "manifest": "./src/extensions/formBoilerplate/FormBoilerplateFormCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FormBoilerplateFormCustomizerStrings": "lib/extensions/formBoilerplate/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

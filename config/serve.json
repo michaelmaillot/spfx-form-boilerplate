@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/hr/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "8b38fd0b-2722-4001-acc0-5fddb5bc4c50",
+        "PageType": 8,
+        "RootFolder": "/sites/hr/Lists/EmployeeOnboarding",
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "formBoilerplate_NewForm": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/hr/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "8b38fd0b-2722-4001-acc0-5fddb5bc4c50",
+        "PageType": 8,
+        "RootFolder": "/sites/hr/Lists/EmployeeOnboarding",
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "formBoilerplate_EditForm": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/hr/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "8b38fd0b-2722-4001-acc0-5fddb5bc4c50",
+        "PageType": 6,
+        "RootFolder": "/sites/hr/Lists/EmployeeOnboarding",
+        "ID": 1,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "formBoilerplate_ViewForm": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/hr/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "8b38fd0b-2722-4001-acc0-5fddb5bc4c50",
+        "PageType": 4,
+        "RootFolder": "/sites/hr/Lists/EmployeeOnboarding",
+        "ID": 1,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    }
+  }
+}

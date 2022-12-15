@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-form-boilerplate-client-side-solution",
+    "id": "0f850be3-9749-4726-9a75-06a89e6f231d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-form-boilerplate description"
+      },
+      "longDescription": {
+        "default": "spfx-form-boilerplate description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-form-boilerplate Feature",
+        "description": "The feature that activates elements of the spfx-form-boilerplate solution.",
+        "id": "31a9806c-0e22-46b2-b99e-13389a467bf3",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-form-boilerplate.sppkg"
+  }
+}
