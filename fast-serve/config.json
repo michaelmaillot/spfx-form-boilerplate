@@ -2,8 +2,5 @@
   "$schema": "https://raw.githubusercontent.com/s-KaiNet/spfx-fast-serve/master/schema/config.latest.schema.json",
   "cli": {
     "isLibraryComponent": false
-  },
-  "serve": {
-    "openUrl": "https://contoso.sharepoint.com/sites/hr/_layouts/15/SPListForm.aspx?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&componentId=8b38fd0b-2722-4001-acc0-5fddb5bc4c50&PageType=8&RootFolder=%2Fsites%2FCommSite%2FLists%2FEmployeeOnboarding"
   }
 }

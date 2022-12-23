@@ -9,10 +9,12 @@ import {
 import { getDefaultTheme } from "@pnp/spfx-controls-react/lib/EnhancedThemeProvider";
 import { IItemAddResult, IItems, IItemUpdateResult } from '@pnp/sp/items/types';
 
-import FormBoilerplate, { IFormBoilerplateProps } from './components/FormBoilerplate';
 import { getSP } from 'configs/pnpConfig';
 import { SPFI } from '@pnp/sp';
 import { ISPEmployeeItem } from 'models/ISPEmployeeItem';
+import IFormBoilerplateProps from 'models/IFormBoilerplateProps';
+import FormBoilerplate from './components/FormBoilerplate';
+import DynamicFormBoilerplate from 'components/DynamicFormBoilerplate';
 
 /**
  * If your form customizer uses the ClientSideComponentProperties JSON input,
@@ -56,8 +58,11 @@ export default class FormBoilerplateFormCustomizer
   public render(): void {
     // Use this method to perform your custom rendering.
 
+    // const formCustomizer = DynamicFormBoilerplate;
+    const formCustomizer = FormBoilerplate;
+
     const formBoilerplate: React.ReactElement<{}> =
-      React.createElement(FormBoilerplate, {
+      React.createElement(formCustomizer, {
         context: this.context,
         displayMode: this.displayMode,
         theme: getDefaultTheme(),

@@ -1,30 +1,21 @@
 import * as React from 'react';
 import { DynamicForm } from '@pnp/spfx-controls-react/lib/controls/dynamicForm/DynamicForm';
-import { ISPEmployeeItem } from 'models/ISPEmployeeItem';
-import { ITheme, MessageBar, MessageBarType } from '@fluentui/react';
 import { FormDisplayMode } from '@microsoft/sp-core-library';
-import { FormCustomizerContext } from '@microsoft/sp-listview-extensibility';
 import { HttpRequestError } from '@pnp/odata';
 import { Logger } from '@pnp/logging';
+import { MessageBar } from '@fluentui/react/lib/components/MessageBar/MessageBar';
+import { MessageBarType } from '@fluentui/react/lib/components/MessageBar/MessageBar.types';
+import IFormBoilerplateProps from 'models/IFormBoilerplateProps';
 
 // import styles from './DynamicFormBoilerplate.module.scss';
-
-export interface IDynamicFormBoilerplateProps {
-  context: FormCustomizerContext;
-  displayMode: FormDisplayMode;
-  theme: ITheme;
-  item: ISPEmployeeItem;
-  onSave: (updatedItem: ISPEmployeeItem) => void;
-  onClose: () => void;
-}
 
 interface IDynamicFormBoilerplateState {
   error: string;
 }
 
-export default class DynamicFormBoilerplate extends React.Component<IDynamicFormBoilerplateProps, IDynamicFormBoilerplateState> {
+export default class DynamicFormBoilerplate extends React.Component<IFormBoilerplateProps, IDynamicFormBoilerplateState> {
 
-  constructor(props: IDynamicFormBoilerplateProps) {
+  constructor(props: IFormBoilerplateProps) {
     super(props);
 
     this.state = {
@@ -32,7 +23,7 @@ export default class DynamicFormBoilerplate extends React.Component<IDynamicForm
     };
   }
 
-  public render(): React.ReactElement<IDynamicFormBoilerplateProps> {
+  public render(): React.ReactElement<IFormBoilerplateProps> {
     return (
       <div>
         {this.state.error &&
