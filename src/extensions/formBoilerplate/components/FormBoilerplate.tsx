@@ -1,20 +1,30 @@
 import * as React from 'react';
 import { Log, FormDisplayMode } from '@microsoft/sp-core-library';
-import {
-  Breadcrumb, CommandBar, DatePicker, Dropdown, IBreadcrumbItem, ICommandBarItemProps,
-  IDropdownOption, IPersonaProps, Label, MessageBar, MessageBarType,
-  PrimaryButton, Separator, TextField, Toggle
-} from '@fluentui/react';
 import { Logger } from '@pnp/logging';
 import { HttpRequestError } from '@pnp/odata';
-import { RichText } from "@pnp/spfx-controls-react/lib/RichText";
 import { PeoplePicker, PrincipalType } from "@pnp/spfx-controls-react/lib/PeoplePicker";
+import { IDropdownOption } from '@fluentui/react/lib/components/Dropdown/Dropdown.types';
+import { IBreadcrumbItem } from '@pnp/spfx-controls-react/lib/controls/folderExplorer/FolderExplorer';
+import { TextField } from '@fluentui/react/lib/components/TextField/TextField';
+import { Label } from '@fluentui/react/lib/components/Label/Label';
+import { Toggle } from '@fluentui/react/lib/components/Toggle/Toggle';
+import { DatePicker } from '@fluentui/react/lib/components/DatePicker/DatePicker';
+import { Dropdown } from '@fluentui/react/lib/components/Dropdown/Dropdown';
+import { CommandBar } from '@fluentui/react/lib/components/CommandBar/CommandBar';
+import { Separator } from '@fluentui/react/lib/components/Separator/Separator';
+import { MessageBar } from '@fluentui/react/lib/components/MessageBar/MessageBar';
+import { MessageBarType } from '@fluentui/react/lib/components/MessageBar/MessageBar.types';
+import { Breadcrumb } from '@fluentui/react/lib/components/Breadcrumb/Breadcrumb';
+import { ICommandBarItemProps } from '@fluentui/react/lib/components/CommandBar/CommandBar.types';
+import { IPersonaProps } from '@fluentui/react/lib/components/Persona/Persona.types';
+import { PrimaryButton } from '@fluentui/react/lib/components/Button/PrimaryButton/PrimaryButton';
 
 import * as strings from 'FormBoilerplateFormCustomizerStrings';
 import styles from './FormBoilerplate.module.scss';
 import { ISPEmployeeItem } from 'models/ISPEmployeeItem';
 import { Constants } from 'globals/Constants';
 import IFormBoilerplateProps from 'models/IFormBoilerplateProps';
+import CustomRichText from 'components/CustomRichText/CustomRichText';
 
 interface IFormBoilerplateState {
   formListItem: ISPEmployeeItem;
@@ -70,10 +80,10 @@ export default class FormBoilerplate extends React.Component<IFormBoilerplatePro
           disabled={formDisabled} />
 
         <Label>{strings.FieldDescription}</Label>
-        <RichText
-          value={this.state.formListItem?.Description}
+        <CustomRichText
+          message={this.state.formListItem?.Description}
           onChange={this._onChangeDescription}
-          isEditMode={!formDisabled} />
+          disabled={formDisabled} />
 
         <Toggle
           label={strings.FieldComplete}

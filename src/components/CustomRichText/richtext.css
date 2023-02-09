@@ -1,0 +1,26 @@
+.rich-text {
+    font-size: inherit;
+    font-family: inherit !important;
+}
+
+.rich-text > .quill {
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.rich-text > .ql-toolbar.ql-snow {
+    position: unset;
+}
+
+.rich-text > .quill:focus-within {
+    border: inherit;
+}
+
+.rich-text .ql-editor:focus {
+    border-width: 2px;
+    border-color: inherit;
+}
+
+.rich-text:has(div[class^="ExternalClass"]) {
+    border: 1px solid black;
+}
